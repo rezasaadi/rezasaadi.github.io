@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Modern Portfolio</title>
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="modern.css" />
+</head>
+<body>
+  <header class="topbar" id="top">
+    <a class="brand" href="../" aria-label="Back to UI selector">
+      <span class="logo">◎</span>
+      <span id="brandName">Portfolio</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="navlink" href="#about">About</a>
+      <a class="navlink" href="#publications">Papers</a>
+      <a class="navlink" href="#research">Research</a>
+      <a class="navlink" href="#projects">Projects</a>
+      <a class="navlink" href="#contact">Contact</a>
+      <button class="theme" id="themeToggle" type="button" aria-label="Toggle theme">Theme</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Intro">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="pill" id="tagline">Researcher • Engineer • Builder</div>
+          <h1 class="h1" id="name">YOUR NAME</h1>
+          <p class="lead" id="summary">Loading…</p>
+
+          <div class="cta">
+            <a class="btn" id="btnGithub" href="#" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" id="btnLinkedIn" href="#" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn ghost" id="btnCV" href="../resume/CV.pdf" target="_blank" rel="noopener">Download CV</a>
+            <a class="btn ghost" href="../retro/">Retro UI</a>
+          </div>
+
+          <div class="meta" id="metaLine"></div>
+        </div>
+
+        <aside class="hero-card" aria-label="Highlights">
+          <div class="card-title">Highlights</div>
+          <ul class="bullets" id="highlights"></ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-head">
+        <h2>About</h2>
+        <p>Short bio, focus areas, and a compact skills map.</p>
+      </div>
+
+      <div class="grid-2">
+        <article class="panel">
+          <h3>Bio</h3>
+          <p id="bio"></p>
+        </article>
+
+        <article class="panel">
+          <h3>Skills</h3>
+          <div id="skills" class="skills"></div>
+        </article>
+      </div>
+
+      <div class="grid-2">
+        <article class="panel">
+          <h3>Experience</h3>
+          <div id="experience" class="timeline"></div>
+        </article>
+
+        <article class="panel">
+          <h3>Education</h3>
+          <div id="education" class="timeline"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="publications">
+      <div class="section-head">
+        <h2>Papers</h2>
+        <p>Peer-reviewed, preprints, workshop papers — whatever you publish, make it easy to scan.</p>
+      </div>
+      <div class="cards" id="pubCards"></div>
+    </section>
+
+    <section class="section" id="research">
+      <div class="section-head">
+        <h2>Research Projects</h2>
+        <p>Deep work, messy experiments, and the occasional plot twist.</p>
+      </div>
+      <div class="cards" id="researchCards"></div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-head">
+        <h2>Implementation Projects</h2>
+        <p>Production-ish code: libraries, demos, prototypes, and the stuff that actually runs.</p>
+      </div>
+
+      <div class="subhead">
+        <div class="sub-left">
+          <div class="small" id="ghNote"></div>
+        </div>
+        <div class="sub-right">
+          <a class="smalllink" id="ghProfile" href="#" target="_blank" rel="noopener">Open GitHub profile →</a>
+        </div>
+      </div>
+
+      <div class="cards" id="projectCards"></div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>Collaboration, consulting, paper discussions, or just nerd-sniping. Pick your channel.</p>
+      </div>
+
+      <div class="grid-2">
+        <article class="panel">
+          <h3>Message</h3>
+          <p id="contactPitch"></p>
+          <div class="cta">
+            <a class="btn" id="mailBtn" href="#">Email</a>
+            <a class="btn ghost" href="../">UI selector</a>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h3>Details</h3>
+          <dl class="dl">
+            <div><dt>Location</dt><dd id="loc"></dd></div>
+            <div><dt>Timezone</dt><dd id="tz"></dd></div>
+            <div><dt>GitHub</dt><dd><a id="gh" href="#" target="_blank" rel="noopener">—</a></dd></div>
+            <div><dt>LinkedIn</dt><dd><a id="li" href="#" target="_blank" rel="noopener">—</a></dd></div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="tiny">Built as a dual-UI static portfolio. Host on GitHub Pages. Edit <code>data/site.json</code>.</div>
+        <a class="tinylink" href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+  </main>
+
+  <script type="module" src="modern.js"></script>
+</body>
+</html>
