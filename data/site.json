@@ -13,12 +13,12 @@
     "orcid": "",
     "cvPdf": "../resume/CV.pdf"
   },
-  "summary": "M.Sc. student in Computer Science at Koç University (Istanbul), working on Secure Multi‑Party Computation (SMPC), privacy‑preserving machine learning, and post‑quantum cryptography. I like research that has both proofs and performance: designing protocols, writing simulation/UC security arguments, and benchmarking implementations (Rust/Go/Docker). Previously built automated crypto asset-management tools and market screeners, and worked on quantum kernels for neural networks using Qiskit/PyQuil. I’m also curating a Post‑Quantum Cryptography (PQC) Application Atlas (90+ papers across 19 domains).",
+  "summary": "I am currently an M.Sc. student in Computer Science at Koç University (Istanbul), where I work under the supervision of Prof. Alptekin Küpçü. My research centers on password-based authentication protocols, SMPC-based designs, and performance-driven cryptographic engineering. My work combines rigorous security arguments with real-world benchmarking, including Rust/Go implementations and Dockerized experimental frameworks. I graduated from the Polytechnic University of Tehran with an M.Sc. in Applied Mathematics, where my research focused on quantum error correction and surface codes. I also worked on quantum kernels for neural networks using Qiskit and PyQuil.",
   "highlights": [
-    "Curating a PQC Application Atlas: 90+ papers (2020–present) organized into 19 application domains.",
     "Research across SMPC, privacy-preserving ML, and post-quantum cryptography (first-author projects in progress).",
-    "External reviewer for IEEE TIFS, ACM ASIACCS 2024 and 2026, ACNS 2026, JISAS 2025,Royal society open science 2024 and the Turkish Journal of Electrical Engineering & Computer Sciences."
-  ],
+    "External reviewer for IEEE TIFS, ACM ASIACCS 2024 and 2026, ACNS 2026, JISAS 2025,Royal society open science 2024 and the Turkish Journal of Electrical Engineering & Computer Sciences.",
+    "Curating a PQC Application Atlas: 90+ papers (2020–present) organized into 19 application domains."
+  ],  
   "skills": {
     "Spoken languages": [
       "Persian (Native)",
