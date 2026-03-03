@@ -10,8 +10,7 @@
 </head>
 <body>
   <header class="topbar" id="top">
-    <!-- Was: Back to UI selector. Now: back to Modern home -->
-    <a class="brand" href="./" aria-label="Back to home">
+    <a class="brand" href="../" aria-label="Back to UI selector">
       <span class="logo">◎</span>
       <span id="brandName">Portfolio</span>
     </a>
@@ -43,28 +42,15 @@
             <a class="btn" id="btnGithub" href="#" target="_blank" rel="noopener">GitHub</a>
             <a class="btn" id="btnLinkedIn" href="#" target="_blank" rel="noopener">LinkedIn</a>
             <a class="btn ghost" id="btnCV" href="../resume/CV.pdf" target="_blank" rel="noopener">Download CV</a>
-            <!-- <a class="btn ghost" href="../retro/">Retro UI</a> -->
+            <a class="btn ghost" href="../retro/">Retro UI</a>
           </div>
 
           <div class="meta" id="metaLine"></div>
         </div>
 
-        <!-- Split the old Highlights card into: top profile pic + bottom highlights -->
-        <aside class="hero-card hero-stack" aria-label="Profile and highlights">
-          <div class="hero-top" aria-label="Profile picture">
-            <!-- Put your image here: modern/assets/img/profile.jpg (or .png/.webp) -->
-            <img
-              class="profile-photo"
-              src="../assets/img/profile.jpg"
-              alt="Profile photo"
-              loading="lazy"
-            />
-          </div>
-
-          <div class="hero-bottom" aria-label="Highlights">
-            <div class="card-title">Highlights</div>
-            <ul class="bullets" id="highlights"></ul>
-          </div>
+        <aside class="hero-card" aria-label="Highlights">
+          <div class="card-title">Highlights</div>
+          <ul class="bullets" id="highlights"></ul>
         </aside>
       </div>
     </section>
@@ -98,21 +84,19 @@
       </article>
     </section>
 
-    <!-- <section class="section" id="researchLink">
+    
+<section class="section" id="research">
   <div class="section-head">
     <h2>Research</h2>
-    <p>Selected projects and publications live on the dedicated page.</p>
+    <p>Detailed research projects live on the dedicated Research page.</p>
   </div>
-
   <article class="panel">
-    <p>See the full list of research projects, publications, and updates.</p>
     <div class="cta">
       <a class="btn" href="./research/">Open Research Page →</a>
     </div>
   </article>
-</section> -->
-
-    <section class="section" id="experience">
+</section>
+<section class="section" id="experience">
       <div class="section-head">
         <h2>Experience</h2>
         <p>Industry and applied research work.</p>
@@ -166,7 +150,7 @@
 
       <div class="subhead">
         <div class="sub-left">
-          <!-- <div class="small" id="ghNote"></div> -->
+          <div class="small" id="ghNote"></div>
         </div>
         <div class="sub-right">
           <a class="smalllink" id="ghProfile" href="#" target="_blank" rel="noopener">Open GitHub profile →</a>
@@ -188,7 +172,7 @@
           <p id="contactPitch"></p>
           <div class="cta">
             <a class="btn" id="mailBtn" href="#">Email</a>
-            <!-- <a class="btn ghost" href="../">UI selector</a> -->
+            <a class="btn ghost" href="../">UI selector</a>
           </div>
         </article>
 
@@ -211,42 +195,6 @@
       </div>
     </footer>
   </main>
-
- <style>
-  .hero-stack{
-    display:flex;
-    flex-direction:column;
-    padding:0;
-    overflow:hidden;
-  }
-
-  
-  .hero-top{
-    padding: 0;
-    display:block;
-  }
-
-  .profile-photo{
-    display:block;
-    width: 100%;
-    height: 240px;          
-    object-fit: cover;      
-    object-position: center;
-    border-radius: 0;       
-    border: 0;
-    box-shadow: none;
-  }
-
-
-  .hero-bottom{
-    padding: 14px 22px 22px;
-    border-top: 1px solid rgba(255,255,255,0.10);
-  }
-
-  @media (max-width: 900px){
-    .profile-photo{ height: 190px; }
-  }
-</style>
 
   <script type="module" src="modern.js"></script>
 </body>
