@@ -226,7 +226,7 @@
     }
   ],
   "implementationProjects": {
-  "mode": "auto",
+  "mode": "manual",
   "featuredRepos": [
     "UpSpa_benchmark",
     "UpSPA_FPB",
