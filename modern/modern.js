@@ -137,7 +137,7 @@ async function init() {
   setTextIfExists('name', site?.name || 'YOUR NAME');
   setTextIfExists('tagline', site?.tagline || '');
   setTextIfExists('summary', site?.summary || '');
-  setTextIfExists('bio', site?.summary || '');
+  setTextIfExists('bio', site?.bio || '');
   setTextIfExists('metaLine', joinNonEmpty([site?.location, site?.email]));
   renderHighlights(site?.highlights || []);
   renderSkills(site?.skills || {});
