@@ -40,7 +40,7 @@ function renderAreaCards(areas) {
 
     const q = document.createElement('div');
     q.className = 'topic-question';
-    q.textContent = area.question || '';
+    q.textContent = area.summary || '';
 
     const tags = document.createElement('div');
     tags.className = 'topic-tags';
@@ -84,7 +84,7 @@ function renderProject(project) {
   if (Array.isArray(project.links) && project.links.length) {
     const actions = document.createElement('div');
     actions.className = 'actions';
-    for (const L of project.links) actions.appendChild(action(L.label || 'Link', L.href || '#'));
+    for (const { label, href } of project.links) actions.appendChild(action(label, href));
     card.appendChild(actions);
   }
   return card;

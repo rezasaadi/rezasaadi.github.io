@@ -36,8 +36,9 @@ function initializeTabs() {
     });
   });
 
-  const requested = location.hash.slice(1);
-  selectTab(requested === 'thesis' ? 'thesis' : 'courses', { updateHash: false });
+  const selectFromHash = () => selectTab(location.hash.slice(1), { updateHash: false });
+  window.addEventListener('hashchange', selectFromHash);
+  selectFromHash();
 }
 
 async function init() {
@@ -45,12 +46,12 @@ async function init() {
   const site = await loadSiteData('../../data/site.json');
   const displayName = site?.name || 'Reza Saadi';
   document.getElementById('brandName').textContent = displayName;
-  setTitle(displayName, 'Koç University M.Sc.');
+  setTitle(displayName, 'Koç University Education');
   initializeTabs();
   attachReveal();
 }
 
 init().catch(error => {
   console.error(error);
-  document.body.innerHTML = `<pre style="padding:20px">M.Sc. page failed to load.\n\n${String(error)}</pre>`;
+  document.body.innerHTML = `<pre style="padding:20px">Koç University education page failed to load.\n\n${String(error)}</pre>`;
 });

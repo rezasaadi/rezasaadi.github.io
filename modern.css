@@ -599,7 +599,7 @@ h3 {
 }
 
 .home-research-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .research-topic {
@@ -685,13 +685,6 @@ h3 {
   min-height: 240px;
   display: flex;
   flex-direction: column;
-}
-
-.artifact-number {
-  margin-bottom: 38px;
-  color: var(--accent-strong);
-  font-size: 0.82rem;
-  font-weight: 750;
 }
 
 .contact-strip {
@@ -929,8 +922,7 @@ h3 {
   }
 
   .publication-grid,
-  .artifact-grid,
-  .home-research-grid {
+  .artifact-grid {
     grid-template-columns: 1fr;
   }
 
@@ -950,6 +942,10 @@ h3 {
 }
 
 @media (max-width: 680px) {
+  .home-research-grid {
+    grid-template-columns: 1fr;
+  }
+
   .topbar {
     min-height: 64px;
   }

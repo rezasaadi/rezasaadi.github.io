@@ -49,7 +49,7 @@ async function init() {
 
   const site = await loadSiteData('../data/site.json');
   el('brandName').textContent = site?.name || 'Portfolio';
-  setTitle(site?.name || 'Portfolio', 'Services');
+  setTitle(site?.name || 'Portfolio', 'Academic Service');
 
   renderService(site?.academicServices || []);
   attachReveal();

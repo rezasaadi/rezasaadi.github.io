@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
 
-  <title>Reza Saadi — Cryptography Researcher</title>
-  <meta name="description" content="Reza Saadi designs password-based, distributed, and post-quantum authentication protocols, connecting formal security with reproducible implementations.">
+  <title>Reza Saadi — PhD Student at Koç University</title>
+  <meta name="description" content="Reza Saadi is a PhD student in Computational Sciences and Engineering at Koç University, researching post-quantum cryptography, privacy-preserving machine learning, secure multiparty computation, and theoretical cryptography.">
   <link rel="canonical" href="https://rezasaadi.github.io/">
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
 
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Reza Saadi — Cryptography Researcher">
-  <meta property="og:description" content="Password-based authentication, secure multiparty computation, post-quantum security, and privacy-preserving learning.">
+  <meta property="og:title" content="Reza Saadi — PhD Student at Koç University">
+  <meta property="og:description" content="Reza Saadi is a PhD student in Computational Sciences and Engineering at Koç University, researching post-quantum cryptography, privacy-preserving machine learning, secure multiparty computation, and theoretical cryptography.">
   <meta property="og:url" content="https://rezasaadi.github.io/">
   <meta property="og:image" content="https://rezasaadi.github.io/assets/img/profile.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -27,7 +27,8 @@
     "alternateName": "HamidReza Saadi Dadmarzi",
     "url": "https://rezasaadi.github.io/",
     "image": "https://rezasaadi.github.io/assets/img/profile.jpg",
-    "jobTitle": "Cryptography Researcher",
+    "jobTitle": "PhD Student in Computational Sciences and Engineering",
+    "description": "Reza Saadi is a PhD student in Computational Sciences and Engineering at Koç University, researching post-quantum cryptography, privacy-preserving machine learning, secure multiparty computation, and theoretical cryptography.",
     "affiliation": {
       "@type": "CollegeOrUniversity",
       "name": "Koç University"
@@ -37,11 +38,10 @@
       "https://www.linkedin.com/in/hrezasaadi/"
     ],
     "knowsAbout": [
-      "Cryptography",
-      "Password authentication",
-      "Secure multiparty computation",
       "Post-quantum cryptography",
-      "Privacy-preserving machine learning"
+      "Privacy-preserving machine learning",
+      "Secure multiparty computation",
+      "Theoretical cryptography"
     ]
   }
   </script>
@@ -70,9 +70,8 @@
     <nav class="nav" id="primaryNav" aria-label="Primary">
       <a class="navlink" href="./research/">Research</a>
       <a class="navlink" href="./publications/">Publications</a>
-      <a class="navlink" href="./projects/">Projects</a>
+      <a class="navlink" href="./education/">Education</a>
       <a class="navlink" href="./teaching/">Teaching</a>
-      <a class="navlink" href="./resume/CV_Short.pdf">CV</a>
       <a class="navlink" href="./contact/">Contact</a>
       <button class="theme" id="themeToggle" type="button" aria-label="Switch color theme">
         <span class="theme-icon" aria-hidden="true">◐</span>
@@ -85,23 +84,14 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-inner">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Cryptography &amp; security researcher</p>
           <h1 id="hero-title">Reza Saadi</h1>
-          <p class="hero-statement">
-            I design password-based and post-quantum authentication protocols,
-            connecting formal security with reproducible implementations.
-          </p>
-          <p class="affiliation">
-            M.Sc. researcher at Koç University
-            <span aria-hidden="true">·</span>
-            KU-Crypto Lab
-          </p>
+          <p class="hero-statement">I am a PhD student in Computational Sciences and Engineering at Koç University, advised by Mehmet Cengiz Onbaşlı. My research focuses on post-quantum cryptography and privacy-preserving machine learning, with additional work in secure multiparty computation and theoretical cryptography.</p>
 
           <div class="cta hero-actions">
-            <a class="btn primary" href="./research/">View research</a>
-            <a class="btn secondary" id="btnCVShort" href="resume/CV_Short.pdf">
-              Download CV
-            </a>
+            <a class="btn primary" href="./research/">Research</a>
+            <a class="btn secondary" href="./publications/">Publications</a>
+            <a class="btn secondary" id="btnCVShort" href="resume/CV_Short.pdf">Short CV</a>
+            <a class="btn secondary" id="btnCVLong" href="resume/CV_Long.pdf">Full CV</a>
           </div>
 
           <div class="profile-links" aria-label="Academic and professional profiles">
@@ -132,6 +122,13 @@
       </div>
     </section>
 
+    <section class="section" aria-labelledby="research-title">
+      <div class="section-head">
+        <h2 id="research-title">Research areas</h2>
+      </div>
+      <div class="research-grid home-research-grid" id="homeResearchCards"></div>
+    </section>
+
     <section class="section featured-section" aria-labelledby="featured-title">
       <div class="section-head split-head">
         <div>
@@ -141,18 +138,6 @@
         <a class="text-link" href="./publications/">View all publications <span aria-hidden="true">→</span></a>
       </div>
       <div class="publication-grid" id="featuredPublications"></div>
-    </section>
-
-    <section class="section" aria-labelledby="research-title">
-      <div class="section-head">
-        <p class="section-kicker">Research</p>
-        <h2 id="research-title">Three connected research directions</h2>
-        <p>
-          My work moves between protocol design, formal security arguments,
-          implementation, and realistic performance evaluation.
-        </p>
-      </div>
-      <div class="research-grid home-research-grid" id="homeResearchCards"></div>
     </section>
 
     <section class="section artifacts-section" aria-labelledby="artifacts-title">
@@ -184,11 +169,12 @@
       <p>© <span id="currentYear"></span> Reza Saadi</p>
       <div class="footer-links">
         <a href="./research/">Research</a>
+        <a href="./publications/">Publications</a>
         <a href="./projects/">Projects</a>
         <a href="./teaching/">Teaching</a>
         <a href="./education/">Education</a>
         <a href="./experience/">Experience</a>
-        <a href="./services/">Services</a>
+        <a href="./services/">Academic Service</a>
         <a href="./about/">About</a>
         <a href="./contact/">Contact</a>
         <a href="#top">Back to top ↑</a>

@@ -13,7 +13,9 @@ const RESEARCH_ICONS = {
   ppml: `
     <path d="M12 20v2M12 2v2M17 20v2M17 2v2M2 12h2M2 17h2M2 7h2M20 12h2M20 17h2M20 7h2M7 20v2M7 2v2"></path>
     <rect x="4" y="4" width="16" height="16" rx="2"></rect>
-    <rect x="8" y="8" width="8" height="8" rx="1"></rect>`
+    <rect x="8" y="8" width="8" height="8" rx="1"></rect>`,
+  'theoretical-cryptography': `
+    <path d="M12 5v15M4 8h16M6 8l-3 7h6L6 8zm12 0-3 7h6l-3-7zM8 20h8"></path>`
 };
 
 export function researchIconMarkup(area = {}) {
@@ -27,9 +29,8 @@ export function researchIconMarkup(area = {}) {
 const ROOT_LINKS = [
   ['Research', 'research/'],
   ['Publications', 'publications/'],
-  ['Projects', 'projects/'],
+  ['Education', 'education/'],
   ['Teaching', 'teaching/'],
-  ['CV', 'resume/CV_Short.pdf'],
   ['Contact', 'contact/']
 ];
 
@@ -40,7 +41,7 @@ const FOOTER_LINKS = [
   ['Teaching', 'teaching/'],
   ['Education', 'education/'],
   ['Experience', 'experience/'],
-  ['Services', 'services/'],
+  ['Academic Service', 'services/'],
   ['About', 'about/'],
   ['Contact', 'contact/']
 ];
@@ -96,7 +97,7 @@ function buildNavigation() {
     const destinationPath = new URL(link.href, location.href).pathname.replace(/\/+$/, '/');
     const currentPath = location.pathname.replace(/\/+$/, '/');
     const section = currentPath === destinationPath ||
-      (label !== 'CV' && destinationPath !== '/' && currentPath.startsWith(destinationPath));
+      (destinationPath !== '/' && currentPath.startsWith(destinationPath));
 
     if (section) link.setAttribute('aria-current', 'page');
     nav.appendChild(link);
@@ -155,6 +156,7 @@ function ensureSkipLink() {
   if (!main) return;
 
   main.id = main.id || 'main';
+  main.tabIndex = -1;
   if (document.querySelector('.skip-link')) return;
 
   const link = document.createElement('a');

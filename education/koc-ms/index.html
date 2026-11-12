@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark light" />
-  <meta name="description" content="Courses, thesis, and thesis-defense presentation for Reza Saadi's M.Sc. in Computer Science at Koç University." />
-  <title>Koç University M.Sc. — Reza Saadi</title>
+  <meta name="description" content="Reza Saadi’s PhD and MSc coursework at Koç University, with the MSc thesis and defense materials." />
+  <title>Koç University — Reza Saadi</title>
   <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="../../modern.css" />
   <link rel="stylesheet" href="./koc-ms.css" />
@@ -25,40 +25,53 @@
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="../">Education</a>
         <span aria-hidden="true">/</span>
-        <span>M.Sc. at Koç University</span>
+        <span>Koç University</span>
       </nav>
 
       <div class="section-head degree-head reveal">
-        <p class="section-kicker">2023/11–Present · Istanbul, Türkiye</p>
-        <h1>M.Sc. in Computer Science</h1>
-        <p>Koç University</p>
+        <h1>Koç University</h1>
       </div>
 
-      <div class="degree-tabs reveal" role="tablist" aria-label="M.Sc. information">
+      <div class="degree-tabs reveal" role="tablist" aria-label="Koç University education">
         <button class="degree-tab" id="courses-tab" type="button" role="tab"
           aria-selected="true" aria-controls="courses-panel" data-tab="courses">
-          My courses
+          Courses
         </button>
         <button class="degree-tab" id="thesis-tab" type="button" role="tab"
           aria-selected="false" aria-controls="thesis-panel" data-tab="thesis" tabindex="-1">
           Thesis
         </button>
+        <button class="degree-tab" id="phd-tab" type="button" role="tab"
+          aria-selected="false" aria-controls="phd-panel" data-tab="phd" tabindex="-1">
+          PhD
+        </button>
       </div>
 
       <section class="degree-tab-panel reveal" id="courses-panel" role="tabpanel"
         aria-labelledby="courses-tab" tabindex="0">
-        <div class="panel empty-courses">
-          <span class="empty-mark" aria-hidden="true">—</span>
-          <h2>My courses</h2>
-          <p>No courses have been added yet.</p>
+        <div class="panel course-panel">
+          <h2>M.Sc. in Computer Science and Engineering</h2>
+          <ul class="bullets">
+            <li><strong>ELEC 528</strong> Communication Networks</li>
+            <li><strong>COMP 543</strong> Modern Cryptography</li>
+            <li><strong>COMP 599</strong> Independent Study (UC-style proof learning)</li>
+            <li><strong>INDR 511</strong> Advanced Optimization Methods</li>
+            <li><strong>INDR 513</strong> Advanced Stochastic Processes</li>
+            <li><strong>MATH 515</strong> Elliptic Curves and Cryptography</li>
+            <li><strong>COMP 548</strong> Medical Image Analysis</li>
+          </ul>
+          <h3>Additional Koç Coursework</h3>
+          <ul class="bullets">
+            <li><strong>DASC 521</strong> Introduction to Machine Learning</li>
+          </ul>
         </div>
       </section>
 
       <section class="degree-tab-panel" id="thesis-panel" role="tabpanel"
         aria-labelledby="thesis-tab" tabindex="0" hidden>
+        <h2 class="section-head">MSc thesis and defense</h2>
         <div class="resource-list">
           <a class="resource-row" href="./files/Reza-Saadi-MSc-Thesis.pdf">
-            <span class="resource-index" aria-hidden="true">01</span>
             <span class="resource-copy">
               <span class="resource-type">PDF document</span>
               <strong>M.Sc. Thesis</strong>
@@ -68,7 +81,6 @@
           </a>
 
           <a class="resource-row" href="./presentation/">
-            <span class="resource-index" aria-hidden="true">02</span>
             <span class="resource-copy">
               <span class="resource-type">Interactive web deck</span>
               <strong>Thesis Defense Presentation</strong>
@@ -76,6 +88,27 @@
             </span>
             <span class="resource-action">View presentation <span aria-hidden="true">→</span></span>
           </a>
+
+          <a class="resource-row" href="./presentation/Secure-SPA-Thesis-Defense.pdf">
+            <span class="resource-copy">
+              <span class="resource-type">PDF slides</span>
+              <strong>Thesis Defense Slides</strong>
+            </span>
+            <span class="resource-action">Open slides <span aria-hidden="true">↗</span></span>
+          </a>
+        </div>
+      </section>
+
+      <section class="degree-tab-panel" id="phd-panel" role="tabpanel"
+        aria-labelledby="phd-tab" tabindex="0" hidden>
+        <div class="panel course-panel">
+          <h2>PhD in Computational Sciences and Engineering</h2>
+          <p>Advisor: Mehmet Cengiz Onbaşlı</p>
+          <ul class="bullets">
+            <li>Biomedical Signal Processing</li>
+            <li>Advanced Quantum Mechanics</li>
+            <li>Independent Study (timing leakage detection in PQ protocols)</li>
+          </ul>
         </div>
       </section>
     </section>

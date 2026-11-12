@@ -50,9 +50,9 @@ function renderFeaturedPublications(publications = []) {
     const actions = document.createElement('div');
     actions.className = 'publication-actions';
     const links = [
-      makeLink('Paper', publication.url),
+      makeLink(publication.urlLabel || 'Paper', publication.url),
       makeLink('Code', publication.code),
-      makeLink('Project', publication.projectPage)
+      makeLink(publication.venueLink?.label, publication.venueLink?.href)
     ].filter(Boolean);
     links.forEach(link => actions.appendChild(link));
 
@@ -67,7 +67,7 @@ function renderResearchAreas(areas = []) {
   if (!root) return;
   root.replaceChildren();
 
-  for (const area of areas.slice(0, 3)) {
+  for (const area of areas) {
     const link = document.createElement('a');
     link.className = 'research-topic reveal';
     link.href = `./research/#${area.id || ''}`;
@@ -79,7 +79,7 @@ function renderResearchAreas(areas = []) {
     const body = document.createElement('div');
     body.className = 'topic-body';
 
-    const title = document.createElement('div');
+    const title = document.createElement('h3');
     title.className = 'topic-title';
     title.textContent = area.title || 'Research area';
 
@@ -87,46 +87,24 @@ function renderResearchAreas(areas = []) {
     question.className = 'topic-question';
     question.textContent = area.summary || area.question || '';
 
-    const tags = document.createElement('div');
-    tags.className = 'topic-tags';
-    for (const label of (area.tags || []).slice(0, 4)) {
-      const tag = document.createElement('span');
-      tag.className = 'tag';
-      tag.textContent = label;
-      tags.appendChild(tag);
-    }
-
-    body.append(title, question, tags);
+    body.append(title, question);
     link.append(icon, body);
     root.appendChild(link);
   }
 }
 
-function renderArtifacts(projects = []) {
+function renderArtifacts({ manual = [], featuredRepos = [] } = {}) {
   const root = byId('featuredArtifacts');
   if (!root) return;
   root.replaceChildren();
 
-  const preferredNames = [
-    'UpSPA Real-Case Password Manager Extension',
-    'Updatable Single-Password Authentication: Paper Artifact and Benchmarks',
-    'AEGIS Protocol Assurance for Post-Quantum IoT'
-  ];
-
-  const selected = preferredNames
-    .map(name => projects.find(project => project.name === name))
+  const selected = featuredRepos
+    .map(repo => manual.find(project => project.links?.repo?.endsWith('/' + repo)))
     .filter(Boolean);
 
-  const fallback = projects.filter(project => !selected.includes(project));
-  const finalProjects = [...selected, ...fallback].slice(0, 3);
-
-  finalProjects.forEach((project, index) => {
+  for (const project of selected) {
     const card = document.createElement('article');
     card.className = 'artifact-card reveal';
-
-    const number = document.createElement('div');
-    number.className = 'artifact-number';
-    number.textContent = String(index + 1).padStart(2, '0');
 
     const title = document.createElement('h3');
     title.textContent = project.name || 'Software artifact';
@@ -137,20 +115,17 @@ function renderArtifacts(projects = []) {
     const actions = document.createElement('div');
     actions.className = 'artifact-actions';
     const sourceLinks = project.links || {};
-    const documentationUrl = project.name === 'AEGIS Protocol Assurance for Post-Quantum IoT'
-      ? './research/aegis-framework/'
-      : sourceLinks.docs;
     const links = [
       makeLink('Repository', sourceLinks.repo),
-      makeLink('Documentation', documentationUrl),
+      makeLink('Documentation', sourceLinks.docs),
       makeLink('Live demo', sourceLinks.demo)
     ].filter(Boolean);
     links.forEach(link => actions.appendChild(link));
 
-    card.append(number, title, description);
+    card.append(title, description);
     if (links.length) card.appendChild(actions);
     root.appendChild(card);
-  });
+  }
 }
 
 function configureProfileLinks(site) {
@@ -160,6 +135,7 @@ function configureProfileLinks(site) {
   setHref('btnScholar', normalizeUrl(links.googleScholar || ''));
   setHref('btnOrcid', normalizeUrl(links.orcid || ''));
   setHref('btnCVShort', links.cvShortPdf || 'resume/CV_Short.pdf');
+  setHref('btnCVLong', links.cvLongPdf || 'resume/CV_Long.pdf');
 
   const email = site.email || '';
   const emailLink = byId('heroEmail');
@@ -175,7 +151,7 @@ async function init() {
 
   const site = await loadSiteData('./data/site.json');
   const displayName = site.displayName || site.name || 'Reza Saadi';
-  setTitle(displayName, 'Cryptography Researcher');
+  setTitle(displayName, 'PhD Student at Koç University');
 
   const brand = byId('brandName');
   if (brand) brand.textContent = displayName;
@@ -183,7 +159,7 @@ async function init() {
   configureProfileLinks(site);
   renderFeaturedPublications(site.publications || []);
   renderResearchAreas(site.researchAreas || []);
-  renderArtifacts(site.implementationProjects?.manual || []);
+  renderArtifacts(site.implementationProjects);
 
   const year = byId('currentYear');
   if (year) year.textContent = String(new Date().getFullYear());

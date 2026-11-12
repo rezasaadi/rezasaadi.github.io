@@ -55,6 +55,31 @@ function renderEducation(list) {
   }
 }
 
+function renderCoursework(coursework) {
+  const root = el('amirkabirCoursework');
+  const groups = [
+    ['M.Sc. in Pure Mathematics', coursework.masters],
+    ['B.Sc. in Applied Mathematics', coursework.bachelors],
+    ['Physics coursework', coursework.physics]
+  ];
+
+  for (const [label, courses] of groups) {
+    const section = document.createElement('section');
+    section.className = 'panel reveal';
+    const heading = document.createElement('h3');
+    heading.textContent = label;
+    const list = document.createElement('ul');
+    list.className = 'bullets';
+    for (const course of courses) {
+      const item = document.createElement('li');
+      item.textContent = course;
+      list.appendChild(item);
+    }
+    section.append(heading, list);
+    root.appendChild(section);
+  }
+}
+
 async function init() {
   initTheme('dark');
 
@@ -63,6 +88,7 @@ async function init() {
   setTitle(site?.name || 'Portfolio', 'Education');
 
   renderEducation(site?.education || []);
+  renderCoursework(site.coursework.amirkabir);
   attachReveal();
 }
 

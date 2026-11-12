@@ -46,6 +46,14 @@ function renderExperience(list) {
       entry.appendChild(ul);
     }
 
+    if (item.link) {
+      const link = document.createElement('a');
+      link.className = 'action';
+      link.textContent = item.link.label;
+      link.href = item.link.href;
+      entry.appendChild(link);
+    }
+
     root.appendChild(entry);
   }
 }

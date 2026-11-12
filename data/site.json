@@ -1,6 +1,6 @@
 {
   "name": "Reza Saadi",
-  "tagline": "Cryptography and security researcher",
+  "tagline": "PhD student at Koç University",
   "location": "Istanbul, Türkiye",
   "email": "hdadmarzi23@ku.edu.tr",
   "githubUsername": "rezasaadi",
@@ -14,22 +14,21 @@
     "cvLongPdf": "resume/CV_Long.pdf",
     "cvShortPdf": "resume/CV_Short.pdf"
   },
-  "bio": "I am HamidReza Saadi Dadmarzi, an M.Sc. student in Computer Science at Koç University and a researcher in cryptography. My work is centered on password-based authentication, secure multi-party computation, post-quantum protocols, and privacy-preserving machine learning. I like problems where theory, proofs, and systems all have to fit together: a protocol should be formally meaningful, implementable, and measurable.",
-  "summary": "I design password-based and post-quantum authentication protocols, connecting formal security with reproducible implementations.",
+  "bio": "I am a PhD student in Computational Sciences and Engineering at Koç University, advised by Mehmet Cengiz Onbaşlı. My research focuses on post-quantum cryptography and privacy-preserving machine learning, with additional work in secure multiparty computation and theoretical cryptography. During my MSc at Koç University, I worked with Prof. Alptekin Küpçü on security models, proofs, and implementations for distributed single-password authentication.",
+  "summary": "I am a PhD student in Computational Sciences and Engineering at Koç University, advised by Mehmet Cengiz Onbaşlı. My research focuses on post-quantum cryptography and privacy-preserving machine learning, with additional work in secure multiparty computation and theoretical cryptography.",
   "highlights": [
-    "M.Sc. researcher at Koç University working on password-based authentication, MPC, PQC, and privacy-preserving ML.",
-    "Author of UpSPA and RoUpSPA research lines, with public code and benchmarks for UpSPA.",
-    "Builder of reproducible Rust/Go artifacts for cryptographic protocols, threshold authentication, and benchmarking."
+    "AEGIS–VAKE studies structural assurance for authenticated key exchange and proof reuse in Lean.",
+    "Structure Matters studies differentially private spectral statistics for ECG windows, with ongoing person-level follow-ups.",
+    "UpSPA, SPA-Web, and RoUpSPA connect provable security for distributed authentication with browser and benchmark artifacts."
   ],
   "skills": {
     "Research areas": [
-      "Cryptography",
-      "Secure multi-party computation",
-      "Password-based authentication",
       "Post-quantum cryptography",
-      "Privacy-preserving ML",
+      "Privacy-preserving machine learning",
+      "Secure multiparty computation",
+      "Theoretical cryptography",
       "Differential privacy",
-      "Federated learning"
+      "Threshold authentication"
     ],
     "Programming": [
       "Rust",
@@ -60,19 +59,31 @@
   },
   "education": [
     {
-      "degree": "M.Sc. in Computer Science",
+      "degree": "PhD in Computational Sciences and Engineering",
+      "href": "./koc-ms/#phd",
+      "school": "Koç University",
+      "location": "Istanbul, Türkiye",
+      "start": "2026",
+      "end": "Present",
+      "details": [
+        "Advisor: Mehmet Cengiz Onbaşlı.",
+        "Research focus: post-quantum cryptography and privacy-preserving machine learning."
+      ]
+    },
+    {
+      "degree": "M.Sc. in Computer Science and Engineering",
       "href": "./koc-ms/",
       "school": "Koç University",
       "location": "Istanbul, Türkiye",
       "start": "2023/11",
-      "end": "Present",
+      "end": "2026/09",
       "details": [
-        "Research focus: password-based authentication systems, secure multi-party computation, privacy-preserving ML, and post-quantum cryptography.",
-        "Research assistant at KU-Crypto Lab under Prof. Alptekin Küpçü."
+        "Advisor: Prof. Alptekin Küpçü.",
+        "Thesis: Secure Single Password Authentication Protocols in Distributed Systems."
       ]
     },
     {
-      "degree": "M.Sc. in Applied Mathematics",
+      "degree": "M.Sc. in Pure Mathematics",
       "school": "Amirkabir University of Technology (Tehran Polytechnic)",
       "location": "Tehran, Iran",
       "start": "2017/09",
@@ -80,14 +91,6 @@
       "details": [
         "Research focus: quantum error-correcting codes, surface codes, and information-theoretic cryptography."
       ]
-    },
-    {
-      "degree": "Minor in Physics",
-      "school": "Amirkabir University of Technology (Tehran Polytechnic)",
-      "location": "Tehran, Iran",
-      "start": "2018/09",
-      "end": "2020/08",
-      "details": []
     },
     {
       "degree": "B.Sc. in Applied Mathematics",
@@ -102,15 +105,26 @@
   ],
   "experience": [
     {
-      "role": "Research Assistant",
+      "role": "Research Assistant (MSc)",
       "org": "KU-Crypto Lab, Koç University",
       "location": "Istanbul, Türkiye",
       "start": "2023",
-      "end": "Present",
+      "end": "2026",
       "bullets": [
-        "Working on cryptographic protocols and secure authentication systems under Prof. Alptekin Küpçü.",
-        "Researching MPC-based password authentication, robust/updatable authentication, post-quantum SSO, and privacy-preserving learning."
+        "Worked with Prof. Alptekin Küpçü on cryptographic protocols and secure distributed authentication at Koç University."
       ]
+    },
+    {
+      "role": "CURE implementation contribution",
+      "org": "Koç University",
+      "location": "Istanbul, Türkiye",
+      "bullets": [
+        "Provided Go/Lattigo implementation and debugging support for homomorphic encryption in privacy-preserving split learning."
+      ],
+      "link": {
+        "label": "CURE paper",
+        "href": "https://arxiv.org/abs/2407.08977"
+      }
     },
     {
       "role": "Software Developer",
@@ -145,48 +159,57 @@
   ],
   "publications": [
     {
-      "title": "UpSPA: Secure and Updatable Single Password Authentication",
-      "venue": "IACR ePrint",
+      "id": "spa-web",
+      "title": "SPA-Web: Browser-Based Single-Password Authentication",
+      "venue": "ISCTürkiye 2026",
       "year": "2026",
-      "status": "Preprint and artifact available",
-      "summary": "An updatable password-authentication protocol with a public implementation and reproducible benchmark suite.",
-      "url": "https://eprint.iacr.org/2026/784.pdf",
-      "code": "https://github.com/rezasaadi/UpSpa_benchmark",
-      "area": "MPC & Distributed Systems"
+      "status": "Accepted",
+      "summary": "Integrates provider-assisted single-password authentication with existing browser registration and login forms. IEEE copyright confirmation is complete.",
+      "code": "https://github.com/rezasaadi/UpSPA-WEB",
+      "area": "Secure Multiparty Computation",
+      "venueLink": {
+        "label": "ISCTürkiye 2026",
+        "href": "https://iscturkiye.com/en/about-us-2026/"
+      }
     },
     {
+      "id": "upspa",
+      "title": "UpSPA: Secure and Updatable Single Password Authentication",
+      "venue": "IACR ePrint 2026/784",
+      "year": "2026",
+      "status": "Submitted to ACNS 2027 (Cycle 1)",
+      "summary": "Supports threshold authentication and independent credential updates. The Cycle 1 author notification is scheduled for 26 November 2026.",
+      "url": "https://eprint.iacr.org/2026/784",
+      "urlLabel": "IACR ePrint",
+      "code": "https://github.com/rezasaadi/UpSpa_benchmark",
+      "venueLink": {
+        "label": "ACNS 2027 dates",
+        "href": "https://acns2027.isg.rhul.ac.uk/#important-dates"
+      },
+      "area": "Secure Multiparty Computation"
+    },
+    {
+      "id": "structure-matters",
+      "title": "Structure Matters: Differentially Private Spectral Statistics for ECG Time Series",
+      "venue": "TS-LIMITS at NeurIPS 2026",
+      "year": "2026",
+      "status": "Accepted poster",
+      "summary": "Studies window-level differentially private release of aggregate ECG spectral statistics.",
+      "venueLink": {
+        "label": "TS-LIMITS workshop",
+        "href": "https://ts-limits.github.io/"
+      },
+      "area": "Privacy-Preserving Machine Learning"
+    },
+    {
+      "id": "roupspa",
       "title": "RoUpSPA: Robust Updatable Single Password Authentication",
       "venue": "Research manuscript",
       "year": "2026",
-      "status": "Manuscript in preparation",
-      "summary": "A robustness-oriented continuation of UpSPA for distributed deployments with provider failures and malicious behavior.",
+      "status": "Manuscript",
+      "summary": "Extends UpSPA with quorum-based writes and recovery for temporarily unavailable providers. Journal submission and a public preprint are unconfirmed.",
       "code": "https://github.com/rezasaadi/Threshold-Password-Authentication-Protocols",
-      "area": "MPC & Distributed Systems"
-    },
-    {
-      "title": "SpectraDP: Spectral Trade-offs for Communication-Efficient Differentially Private Learning",
-      "venue": "Research manuscript",
-      "year": "2026",
-      "status": "Work in progress",
-      "summary": "A frequency-domain approach to communication-efficient differentially private federated learning.",
-      "area": "Privacy-Preserving ML"
-    },
-    {
-      "title": "QuasarSSO: A Post-Quantum Password-Protected SSO System",
-      "venue": "Research project",
-      "year": "2026",
-      "status": "Work in progress",
-      "summary": "A KEM-centered direction for password-protected single sign-on in the post-quantum setting.",
-      "area": "Post-Quantum Cryptography"
-    },
-    {
-      "title": "AEGIS: Protocol Assurance for Post-Quantum IoT",
-      "venue": "Research direction and project architecture",
-      "year": "2026",
-      "status": "Research direction · active development",
-      "summary": "A research direction for structuring post-quantum IoT authentication and key-establishment protocols as framework models, a typed DSL, formal games, and machine-checkable obligations.",
-      "url": "./aegis-framework/",
-      "area": "Post-Quantum Cryptography"
+      "area": "Secure Multiparty Computation"
     }
   ],
   "researchProjects": [
@@ -208,7 +231,7 @@
       ],
       "links": {
         "projectPage": "",
-        "paper": "https://eprint.iacr.org/2026/784.pdf",
+        "paper": "https://eprint.iacr.org/2026/784",
         "code": "https://github.com/rezasaadi/UpSpa_benchmark"
       }
     },
@@ -216,15 +239,13 @@
       "title": "RoUpSPA: Robust Updatable Single Password Authentication",
       "role": "Protocol design",
       "when": "2026",
-      "summary": "Robust extension of the UpSPA direction, targeting stronger availability and failure/malicious-behavior handling.",
+      "summary": "Extends UpSPA with quorum-based writes and recovery for temporarily unavailable providers.",
       "stack": [
         "MPC",
         "Robustness",
         "Distributed systems"
       ],
-      "highlights": [
-        "Preprint; planned ACM TOPS submission."
-      ],
+      "highlights": [],
       "links": {
         "projectPage": "",
         "paper": "",
@@ -291,46 +312,19 @@
         "paper": "",
         "code": ""
       }
-    },
-    {
-      "title": "DPFL / SpectraDP",
-      "role": "Research project",
-      "when": "In progress",
-      "summary": "Spectral trade-offs for communication-efficient differentially private federated learning.",
-      "stack": [
-        "Differential privacy",
-        "Federated learning",
-        "Fourier",
-        "PPML"
-      ],
-      "highlights": [
-        "Frequency-domain grouping and DP accounting for communication efficiency."
-      ],
-      "links": {
-        "projectPage": "",
-        "paper": "",
-        "code": ""
-      }
     }
   ],
   "implementationProjects": {
     "mode": "manual",
     "featuredRepos": [
-      "UpSPA_extension",
-      "UpSPA_Extension_User_Study_Version",
-      "Threshold-Password-Authentication-Protocols",
-      "CTRU-Light-and-PQC-on-AVR",
       "UpSpa_benchmark",
-      "Augsso_bench",
-      "PAS-TA-U_bench",
-      "PASTA_bench",
-      "TSPA_benchmark",
-      "rezasaadi.github.io"
+      "UpSPA-WEB",
+      "Threshold-Password-Authentication-Protocols"
     ],
     "manual": [
       {
-        "name": "UpSPA Real-Case Password Manager Extension",
-        "description": "A real-case application of UpSPA as a decentralized password-manager product. The current implementation is a browser extension prototype; the same UpSPA-based line is intended to grow into mobile and desktop clients as future products after the extension is stabilized.",
+        "name": "UpSPA-Web browser artifact",
+        "description": "Browser extension and supporting services for single-password authentication on existing registration and login forms.",
         "topics": [
           "Browser extension",
           "Password manager",
@@ -341,9 +335,7 @@
           "TypeScript"
         ],
         "links": {
-          "repo": "https://github.com/rezasaadi/UpSPA_extension",
-          "docs": "https://github.com/rezasaadi/UpSPA_extension/tree/main/docs",
-          "demo": ""
+          "repo": "https://github.com/rezasaadi/UpSPA-WEB"
         }
       },
       {
@@ -357,7 +349,7 @@
         ],
         "links": {
           "repo": "https://github.com/rezasaadi/UpSpa_benchmark",
-          "docs": "https://eprint.iacr.org/2026/784.pdf",
+          "docs": "https://eprint.iacr.org/2026/784",
           "demo": ""
         }
       },
@@ -393,21 +385,6 @@
         }
       },
       {
-        "name": "UpSPA Browser Extension User Study",
-        "description": "A public user-study version of the UpSPA browser extension for evaluating the real password-management workflow.",
-        "topics": [
-          "Browser extension",
-          "User study",
-          "UpSPA",
-          "Authentication"
-        ],
-        "links": {
-          "repo": "https://github.com/rezasaadi/UpSPA_Extension_User_Study_Version",
-          "docs": "",
-          "demo": ""
-        }
-      },
-      {
         "name": "QuasarSSO / KEMSSO Post-Quantum Password-Protected SSO",
         "description": "A post-quantum password-protected single-sign-on research project using KEM-centered authentication design.",
         "topics": [
@@ -433,7 +410,7 @@
         ],
         "links": {
           "repo": "",
-          "docs": "../research/aegis-framework/",
+          "docs": "/research/aegis-framework/",
           "demo": ""
         }
       },
@@ -449,22 +426,7 @@
         ],
         "links": {
           "repo": "",
-          "docs": "",
-          "demo": ""
-        }
-      },
-      {
-        "name": "DPFL / SpectraDP Communication-Efficient Private Learning",
-        "description": "Spectral trade-offs for differentially private federated learning, combining communication efficiency with principled privacy accounting.",
-        "topics": [
-          "Differential privacy",
-          "Federated learning",
-          "Fourier",
-          "PPML"
-        ],
-        "links": {
-          "repo": "",
-          "docs": "",
+          "docs": "https://arxiv.org/abs/2407.08977",
           "demo": ""
         }
       },
@@ -602,7 +564,7 @@
       "text": "External reviewer for IEEE TIFS (2024–present), ACM ASIACCS (2024, 2026), ESORICS (2025, 2026), ACNS (2026), Royal Society Open Science (2024), PeerJ (2026), JISA (2025), and Turkish Journal of Electrical Engineering & Computer Sciences (2025)."
     },
     {
-      "text": "Mentored two interns during Summer 2025; mentoring four interns from Fall 2025 through Summer 2026."
+      "text": "Mentored five interns across multiple semesters."
     }
   ],
   "teachingExperience": [
@@ -623,11 +585,11 @@
         },
         {
           "course": "Computer Networks & Security",
-          "term": "Spring 2025, Spring 2026"
+          "term": "Spring 2026, Spring 2025"
         },
         {
           "course": "Modern Cryptography",
-          "term": "Fall 2025"
+          "term": "Fall 2026, Fall 2025"
         }
       ]
     },
@@ -703,167 +665,171 @@
   },
   "researchAreas": [
     {
-      "id": "mpc-distributed",
-      "title": "Multi-Party Computation & Distributed Systems",
-      "icon": "",
-      "question": "How can password authentication remain secure when secrets are distributed, updateable, and exposed to malicious infrastructure?",
-      "summary": "This line studies password-authentication protocols that split trust across servers while supporting updates, robustness, and performance measurement. My contribution is at the protocol-design/proof boundary, plus the systems side: Rust/Go implementations, Dockerized experiments, and reproducible benchmarks.",
+      "id": "pqc",
+      "title": "Post-Quantum Cryptography and Quantum Information",
+      "summary": "I study authenticated key exchange, timing leakage in post-quantum implementations, and mutually unbiased bases in dimension six.",
       "tags": [
-        "MPC",
-        "Distributed authentication",
-        "Threshold cryptography",
-        "Robustness",
-        "Benchmarks"
+        "Post-quantum cryptography",
+        "Quantum information"
       ],
       "projects": [
         {
-          "title": "UpSPA: Secure and Updatable Single Password Authentication",
-          "status": "Preprint / submitted to ESORICS 2026",
-          "summary": "UpSPA is the core protocol line, and the full-stack prototype is its real-case application: a decentralized password-manager browser extension built around UpSPA. The current product target is the browser extension; mobile and desktop clients are planned future products once the extension workflow is stable.",
-          "tags": [
-            "Single-password authentication",
-            "Updatable credentials",
-            "MPC",
-            "Rust",
-            "Go"
-          ],
+          "title": "AEGIS–VAKE",
+          "summary": "AEGIS provides structural checks for authenticated key-exchange models. VAKE studies which Lean proofs can be reused when a protocol changes. The Rust and Lean interpreters agreed on all 188 tested executions. A signing-origin proof was reused for two controlled signed Diffie–Hellman revisions under trusted credentials and a symbolic attacker model.",
+          "status": "",
           "links": [
             {
-              "label": "ePrint",
-              "href": "https://eprint.iacr.org/2026/784.pdf"
-            },
-            {
-              "label": "Benchmark code",
-              "href": "https://github.com/rezasaadi/UpSpa_benchmark"
-            },
-            {
-              "label": "Browser extension prototype",
-              "href": "https://github.com/rezasaadi/UpSPA_extension"
+              "label": "AEGIS framework",
+              "href": "/research/aegis-framework/"
             }
           ]
         },
         {
-          "title": "RoUpSPA: Robust Updatable Single Password Authentication",
-          "status": "Preprint / planned ACM TOPS submission",
-          "summary": "A robustness-oriented continuation of UpSPA, focused on making updatable password authentication resilient to failure and malicious behavior in distributed deployments.",
-          "tags": [
-            "Robust authentication",
-            "Distributed systems",
-            "Malicious security",
-            "Availability"
-          ],
+          "title": "Timing Leakage in Post-Quantum Implementations",
+          "summary": "Combines instruction analysis with end-to-end timing experiments to study when known Kyber timing effects are measurable on Intel processors.",
+          "status": "Ongoing",
+          "links": []
+        },
+        {
+          "title": "Computational mutually unbiased bases in ℂ⁶",
+          "summary": "Searches for four approximately mutually unbiased bases using Riemannian optimization and minimax refinement. Rational certificates give upper bounds on the achieved deviation.",
+          "status": "Ongoing",
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": "ppml",
+      "title": "Privacy-Preserving Machine Learning and ML Theory",
+      "summary": "I study differentially private ECG spectral statistics and geometric deletion certificates for randomized PCA.",
+      "tags": [
+        "Differential privacy",
+        "Machine unlearning"
+      ],
+      "projects": [
+        {
+          "title": "Structure Matters: Differentially Private Spectral Statistics for ECG Time Series",
+          "summary": "Studies window-level differentially private release of aggregate ECG spectral statistics.",
+          "status": "Accepted TS-LIMITS workshop poster",
           "links": [
             {
-              "label": "Threshold password benchmarks",
+              "label": "Publication record",
+              "href": "/publications/#structure-matters"
+            }
+          ]
+        },
+        {
+          "title": "PersonGuard (Auditable Person-Level DP Release of ECG Spectra)",
+          "summary": "Moves to auditable person-level release under public-to-private data mismatch.",
+          "status": "Ongoing",
+          "links": []
+        },
+        {
+          "title": "CrossLead (Person-Level DP Fusion of Multilead ECG Spectra)",
+          "summary": "Studies person-level private release of relationships between ECG leads.",
+          "status": "Ongoing",
+          "links": []
+        },
+        {
+          "title": "Grassmann/PCA machine unlearning",
+          "summary": "Develops geometric deletion certificates for randomized PCA.",
+          "status": "Ongoing",
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": "mpc-distributed",
+      "title": "Secure Multiparty Computation",
+      "summary": "I design and implement distributed password authentication with threshold providers, independent credential updates, and recovery.",
+      "tags": [
+        "Threshold authentication",
+        "Distributed systems"
+      ],
+      "projects": [
+        {
+          "title": "UpSPA, SPA-Web, and RoUpSPA",
+          "summary": "UpSPA supports threshold authentication and independent credential updates. SPA-Web brings the approach to existing browser login and registration forms. RoUpSPA adds quorum-based writes and recovery for temporarily unavailable providers.",
+          "status": "",
+          "links": [
+            {
+              "label": "UpSPA paper benchmark",
+              "href": "https://github.com/rezasaadi/UpSpa_benchmark"
+            },
+            {
+              "label": "UpSPA-Web browser artifact",
+              "href": "https://github.com/rezasaadi/UpSPA-WEB"
+            },
+            {
+              "label": "Threshold authentication benchmarks",
               "href": "https://github.com/rezasaadi/Threshold-Password-Authentication-Protocols"
             }
           ]
         }
-      ],
-      "publications": [
-        "UpSPA: Secure and Updatable Single Password Authentication",
-        "RoUpSPA: Robust Updatable Single Password Authentication"
-      ],
-      "iconKey": "mpc-distributed"
+      ]
     },
     {
-      "id": "pqc",
-      "title": "Post-Quantum Cryptography",
-      "icon": "",
-      "question": "What does authentication look like when password-protected systems and IoT protocols must survive the post-quantum transition?",
-      "summary": "My PQC work is about taking post-quantum tools beyond primitives and into application-level protocol models: password-protected SSO, KEM-based authentication, and mechanizable security frameworks for constrained IoT protocols.",
+      "id": "theoretical-cryptography",
+      "title": "Theoretical Cryptography",
+      "summary": "I work on provable security for distributed authentication and threshold cryptography. My earlier work covered quantum error-correcting codes and information-theoretic cryptography.",
       "tags": [
-        "PQC",
-        "KEM",
-        "SSO",
-        "IoT AKE",
-        "Mechanized security"
+        "Provable security",
+        "Threshold cryptography"
       ],
       "projects": [
         {
-          "title": "QuasarSSO / KEMSSO: Post-Quantum Password-Protected SSO",
-          "status": "Research project",
-          "summary": "A post-quantum password-protected single-sign-on direction that uses KEM-centered design to reason about authentication in the post-quantum setting, while keeping the password-authentication story connected to deployable SSO workflows.",
-          "tags": [
-            "Post-quantum SSO",
-            "KEM",
-            "Password protection",
-            "Authentication"
-          ],
-          "links": []
-        },
-        {
-          "title": "AEGIS: Protocol Assurance for Post-Quantum IoT",
-          "status": "Research direction · active development",
-          "summary": "A research direction for making post-quantum IoT authenticated key-exchange analyses structured, comparable, and auditable. It keeps state leakage, desynchronization, downgrade, energy exhaustion, KCI/UKS, and AKE secrecy as distinct claims.",
-          "tags": [
-            "IoT",
-            "AKE",
-            "Security model",
-            "State leakage",
-            "Energy exhaustion"
-          ],
+          "title": "Security models and proofs for distributed authentication",
+          "summary": "My MSc thesis develops protocol models for distributed single-password authentication and analyzes security with simulation-based proofs and phase-specific hybrid arguments.",
+          "status": "",
           "links": [
             {
-              "label": "Open framework",
-              "href": "./aegis-framework/"
+              "label": "Koç MSc thesis page",
+              "href": "/education/koc-ms/#thesis"
             }
           ]
         }
-      ],
-      "publications": [
-        "QuasarSSO: A Post-Quantum Password-Protected SSO System",
-        "AEGIS: Protocol Assurance for Post-Quantum IoT"
-      ],
-      "iconKey": "pqc"
-    },
-    {
-      "id": "ppml",
-      "title": "Privacy-Preserving ML",
-      "icon": "",
-      "question": "How can learning systems expose less data while staying efficient enough for real distributed training pipelines?",
-      "summary": "This line connects cryptographic privacy and machine learning systems. I present CURE and DPFL/SpectraDP as complementary directions: one based on FHE tooling and one based on communication-efficient differential privacy for federated learning.",
-      "tags": [
-        "PPML",
-        "FHE",
-        "Differential privacy",
-        "Federated learning",
-        "Lattigo"
-      ],
-      "projects": [
-        {
-          "title": "CURE: Privacy-Preserving ML with FHE",
-          "status": "Research / implementation contribution",
-          "summary": "Work on privacy-preserving ML using Lattigo in Go, including implementation/debugging of CKKS-based FHE and bootstrapping modules. This section highlights my ability to move between crypto libraries, engineering details, and ML privacy goals.",
-          "tags": [
-            "FHE",
-            "CKKS",
-            "Go",
-            "Lattigo",
-            "Bootstrapping"
-          ],
-          "links": []
-        },
-        {
-          "title": "DPFL / SpectraDP: Spectral Trade-offs for Communication-Efficient Differentially Private Learning",
-          "status": "Research manuscript in progress",
-          "summary": "A frequency-domain / spectral approach to differentially private federated learning, aimed at reducing communication while preserving principled DP accounting and model utility.",
-          "tags": [
-            "Differential privacy",
-            "Federated learning",
-            "Fourier",
-            "Spectral methods",
-            "Communication efficiency"
-          ],
-          "links": []
-        }
-      ],
-      "publications": [
-        "SpectraDP: Spectral Trade-offs for Communication-Efficient Differentially Private Learning"
-      ],
-      "iconKey": "ppml"
+      ]
     }
   ],
   "displayName": "Reza Saadi",
-  "fullName": "HamidReza Saadi Dadmarzi"
+  "fullName": "HamidReza Saadi Dadmarzi",
+  "coursework": {
+    "amirkabir": {
+      "masters": [
+        "Real Analysis I",
+        "Advanced Algebra",
+        "Algebraic Topology I",
+        "Advanced Topics in Linear Algebra"
+      ],
+      "bachelors": [
+        "Calculus I",
+        "Calculus II",
+        "Differential Equations",
+        "Fundamentals of Mathematics",
+        "Fundamentals of Probability",
+        "Fundamentals of Matrices and Linear Algebra",
+        "Fundamentals of Mathematical Analysis",
+        "Mathematical Analysis",
+        "Fundamentals of Geometry",
+        "Local Differential Geometry",
+        "Fundamentals of Numerical Analysis",
+        "Numerical Analysis",
+        "Numerical Linear Algebra",
+        "Fundamentals of Algebra",
+        "Theory of Graphs",
+        "Linear Optimization",
+        "Probability I",
+        "General Topology"
+      ],
+      "physics": [
+        "General Physics I",
+        "General Physics II",
+        "General Physics Lab I",
+        "General Physics Lab II",
+        "Electromagnetism I",
+        "Physical Mathematics II",
+        "Physical Mathematics III"
+      ]
+    }
+  }
 }

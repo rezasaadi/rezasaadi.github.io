@@ -1,4 +1,4 @@
-import { loadSiteData, setTitle, normalizeUrl } from '../assets/common.js';
+import { loadSiteData, setTitle, normalizeUrl, smoothScrollToHash } from '../assets/common.js';
 import { initTheme, el, attachReveal } from '../page-helpers.js';
 
 function publicationLink(label, href) {
@@ -6,9 +6,7 @@ function publicationLink(label, href) {
 
   const link = document.createElement('a');
   link.className = 'action';
-  link.href = href === './aegis-framework/'
-    ? '../research/aegis-framework/'
-    : normalizeUrl(href);
+  link.href = normalizeUrl(href);
   link.textContent = label;
 
   if (/^https?:\/\//.test(href)) {
@@ -26,6 +24,7 @@ function renderPublications(publications = []) {
   for (const publication of publications) {
     const card = document.createElement('article');
     card.className = 'publication-entry reveal';
+    card.id = publication.id;
 
     const meta = document.createElement('div');
     meta.className = 'publication-meta';
@@ -52,9 +51,9 @@ function renderPublications(publications = []) {
     const actions = document.createElement('div');
     actions.className = 'publication-actions';
     [
-      publicationLink('Paper', publication.url),
+      publicationLink(publication.urlLabel || 'Paper', publication.url),
       publicationLink('Code', publication.code),
-      publicationLink('Project', publication.projectPage)
+      publicationLink(publication.venueLink?.label, publication.venueLink?.href)
     ].filter(Boolean).forEach(link => actions.appendChild(link));
 
     card.append(meta, title, summary);
@@ -71,6 +70,7 @@ async function init() {
   setTitle(site?.name || 'Portfolio', 'Publications');
   renderPublications(site?.publications || []);
   attachReveal();
+  requestAnimationFrame(smoothScrollToHash);
 }
 
 init().catch((error) => {
